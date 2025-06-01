@@ -9,8 +9,20 @@ export default class MyDocument extends Document {
           {/* —— AQUI van todas tus hojas de estilo externas —— */}
 
             {/* Favicon */}
+          <link rel="icon" 
+          type="image/png" 
+          href="/favicon.png" 
+          media="(prefers-color-scheme: light)"/>
+          
+          {/* Favicon modo oscuro (prefers-color-scheme: dark) */}
+          <link
+            rel="icon"
+            type="image/png"
+            href="/favicon_neg.png"
+            media="(prefers-color-scheme: dark)"
+          />
+          {/* Fallback genérico para navegadores que no soportan media queries */}
           <link rel="icon" type="image/png" href="/favicon.png" />
-
           {/* Tu CSS local (public/css/style.css) */}
           <link rel="stylesheet" href="/css/style.css" />
 
