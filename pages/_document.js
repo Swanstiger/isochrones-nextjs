@@ -7,7 +7,10 @@ export default class MyDocument extends Document {
       <Html lang="es">
         <Head>
           {/* —— AQUI van todas tus hojas de estilo externas —— */}
-          
+
+            {/* Favicon */}
+          <link rel="icon" type="image/png" href="/favicon.png" />
+
           {/* Tu CSS local (public/css/style.css) */}
           <link rel="stylesheet" href="/css/style.css" />
 
