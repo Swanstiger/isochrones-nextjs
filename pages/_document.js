@@ -7,13 +7,6 @@ export default class MyDocument extends Document {
       <Html lang="es">
         <Head>
           {/* —— AQUI van todas tus hojas de estilo externas —— */}
-
-            {/* Favicon */}
-          <link rel="icon" 
-          type="image/png" 
-          href="/favicon.png" 
-          media="(prefers-color-scheme: light)"/>
-          
           {/* Favicon modo oscuro (prefers-color-scheme: dark) */}
           <link
             rel="icon"
@@ -21,6 +14,15 @@ export default class MyDocument extends Document {
             href="/favicon_neg.png"
             media="(prefers-color-scheme: dark)"
           />
+
+
+            {/* Favicon */}
+          <link rel="icon" 
+          type="image/png" 
+          href="/favicon.png" 
+          media="(prefers-color-scheme: light)"/>
+          
+
           {/* Fallback genérico para navegadores que no soportan media queries */}
           <link rel="icon" type="image/png" href="/favicon.png" />
           {/* Tu CSS local (public/css/style.css) */}
