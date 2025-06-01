@@ -1,8 +1,13 @@
 // pages/_app.js
-import '../styles/globals.css'; // (si tenías algún CSS global adicional, de lo contrario puedes dejarlo vacío)
+import '../styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
 }
 
 export default MyApp;

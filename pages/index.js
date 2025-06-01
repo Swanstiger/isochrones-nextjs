@@ -534,17 +534,11 @@ export default function Home() {
       />
 
        {/* CONTENEDOR PRINCIPAL */}
-    <div style={{ display: 'flex', height: '100vh', margin: 0, padding: 0 }}>
+    <div className="flex h-screen w-screen">
       {/* PANEL IZQUIERDO: MENU (20%) */}
       <div
         id="controls"
-        className="p-3 bg-light border-end"
-        style={{
-          width: '20%',
-          minWidth: '20%',
-          maxWidth: '20%',
-          overflowY: 'auto'
-        }}
+        className="w-1/5 min-w-[20%] max-w-[20%] overflow-y-auto p-3 bg-light border-r"
       >
         <div className="mb-3">
           <label htmlFor="isochroneInput" className="form-label">
@@ -586,26 +580,14 @@ export default function Home() {
       <div
         id="map"
         ref={mapRef}
-        style={{
-          width: '50%',
-          minWidth: '50%',
-          maxWidth: '50%',
-          height: '100vh'
-        }}
+      className="w-1/2 h-screen"
       ></div>
 
       {/* PANEL DERECHO: TABLA (30%) */}
       <div
         id="infoPanel"
-        className="p-3 bg-white border-start"
-        style={{
-          width: '30%',
-          minWidth: '30%',
-          maxWidth: '30%',
-          overflowY: 'auto',
-          display: 'flex',
-          flexDirection: 'column'
-        }}
+        className="w-3/10 min-w-[30%] max-w-[30%] overflow-y-auto flex flex-col p-3 bg-white border-l"
+
       >
         <table
           id="isochroneTable"
