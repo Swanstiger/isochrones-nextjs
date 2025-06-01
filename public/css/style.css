@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+
+
+    body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    
+}
+h2 {
+    font-weight: 700;
+}
+
+#controls {
+    width: 20%; /* Ancho reducido */
+    min-width: 10%; /* Mínimo ancho reducido */
+    background-color: #f9f9f9;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+#controls h3 {
+    text-align: center;
+
+    margin: 0; /* Removes any default margin that might affect centering */
+}
+
+#map {
+    flex-grow: 1;
+    height: 100vh;
+    background: linear-gradient(180deg, #e0f7fa, #80deea);
+}
+
+#infoPanel {
+    width: 25%;
+    min-width: 15%;
+    max-width: 30%; /* Limita el ancho máximo */
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out; /* Añade una transición suave */
+
+#infoPanel h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: flex; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: center; /* Centra horizontalmente */
+    vertical-align: middle; /* Centra verticalmente */
+    border: 1px solid #ddd; /* Opcional: para bordes */
+}
+
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-group button:hover {
+    background-color: #FF6B6B;
+    transform: scale(1.05);
+    
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold; /* Ensures both titles have the same font weight */
+    margin: 0; /* Removes any default margin that might affect centering */
+}
+
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+table.dataTable td.dt-type-numeric {
+    text-align: center !important; /* Sobrescribe el texto alineado a la derecha */
+}
+table.dataTable td {
+    text-align: center !important;
+}
+/* Alinea el texto del encabezado al centro inicialmente */
+table.dataTable th {
+    text-align: center;
+    padding-left: 5px; /* Añade un mínimo de 5px de espacio para el icono de ordenación */
+    position: relative; /* Necesario para posicionar el icono de forma absoluta */
+}
+
+/* Ajusta la posición del icono de ordenación a la derecha */
+table.dataTable th .sorting:after,
+table.dataTable th .sorting_asc:after,
+table.dataTable th .sorting_desc:after {
+    position: absolute;
+    right: 5px; /* Mueve el icono 5px más a la derecha */
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5px; /* Asegura que haya al menos 5px de espacio entre el texto y el icono */
+}
+
+/* -------------------------------------------------- */
+/* Sorting icons and positioning overrides */
+/* Previously displayed two separate icons, hide first one */
+table.dataTable thead .dt-column-order {
+    top: 0.18em !important;
+    right: auto !important;
+    font-family: 'Material Icons' !important;
+    font-size: 0.8em !important;
+    line-height: 1 !important; /* Ensure consistent line height */
+    margin-left: 5px !important; /* Adjust as needed to move slightly to the right of the text */
+}
+
+
+    
+@media (max-width: 768px) {
+    #controls, #infoPanel {
+        width: 100%;
+        order: 1;
+    }
+    #map {
+        height: 50vh;
+    }
+}
+#controls, #infoPanel {
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Clase para cambiar el tono de color */
+img.dynamic-hue {
+    filter: hue-rotate(0deg) saturate(4);
+}
+

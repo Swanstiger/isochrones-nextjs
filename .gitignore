@@ -1,0 +1,14 @@
+# Evitar subir dependencias
+node_modules/
+
+# Archivos temporales de sistema y editores
+.DS_Store
+Thumbs.db
+
+# Next.js build output
+.next/
+
+# Lock files (opcional, si no quieres subir lock files)
+# package-lock.json
+# yarn.lock
+.env.local
